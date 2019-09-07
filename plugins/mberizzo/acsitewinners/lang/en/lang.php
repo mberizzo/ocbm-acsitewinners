@@ -1,0 +1,13 @@
+<?php return [
+    'plugin' => [
+        'name' => 'AcSiteWinners',
+        'description' => '',
+    ],
+    'labels' => [
+        'date' => 'Date',
+        'name' => 'Name',
+        'num_installments' => 'Num. Installments',
+        'product_name' => 'Product',
+        'location' => 'Localidad',
+    ],
+];

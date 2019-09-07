@@ -1,0 +1,26 @@
+columns:
+    date:
+        label: 'mberizzo.acsitewinners::lang.labels.date'
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: 'mberizzo.acsitewinners::lang.labels.name'
+        type: text
+        searchable: true
+        sortable: true
+    num_installments:
+        label: 'mberizzo.acsitewinners::lang.labels.num_installments'
+        type: number
+        searchable: true
+        sortable: true
+    product_name:
+        label: 'mberizzo.acsitewinners::lang.labels.product_name'
+        type: text
+        searchable: true
+        sortable: true
+    location:
+        label: 'mberizzo.acsitewinners::lang.labels.location'
+        type: text
+        searchable: true
+        sortable: true

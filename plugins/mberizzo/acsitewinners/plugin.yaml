@@ -1,0 +1,11 @@
+plugin:
+    name: 'mberizzo.acsitewinners::lang.plugin.name'
+    description: 'mberizzo.acsitewinners::lang.plugin.description'
+    author: Mberizzo
+    icon: oc-icon-gift
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'mberizzo.acsitewinners::lang.plugin.name'
+        url: mberizzo/acsitewinners/winners
+        icon: icon-gift
