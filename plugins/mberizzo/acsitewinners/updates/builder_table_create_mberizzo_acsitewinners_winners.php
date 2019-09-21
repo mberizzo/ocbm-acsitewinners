@@ -11,11 +11,13 @@ class BuilderTableCreateMberizzoAcsitewinnersWinners extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->date('date');
-            $table->integer('num_installments');
-            $table->string('product_name');
-            $table->string('name', 150);
-            $table->string('location', 150);
+            $table->date('fecha');
+            $table->integer('cuota');
+            $table->string('producto');
+            $table->string('nombre');
+            $table->string('provincia');
+            $table->string('valor');
+            $table->string('nrosorteo');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

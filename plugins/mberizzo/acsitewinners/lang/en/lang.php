@@ -9,5 +9,7 @@
         'num_installments' => 'Num. Installments',
         'product_name' => 'Product',
         'location' => 'Localidad',
+        'value' => 'Value',
+        'draw_number' => 'Draw Number',
     ],
 ];
