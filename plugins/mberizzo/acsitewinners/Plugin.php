@@ -6,9 +6,10 @@ class Plugin extends PluginBase
 {
     public function registerComponents()
     {
-    }
-
-    public function registerSettings()
-    {
+        return [
+            'Mberizzo\Acsitewinners\Components\WinnerList' => 'winnerList',
+            'Mberizzo\Acsitewinners\Components\YearList' => 'yearList',
+            'Mberizzo\Acsitewinners\Components\MonthList' => 'monthList',
+        ];
     }
 }

@@ -43,4 +43,13 @@ class Winner extends Model
     {
         $this->attributes['provincia'] = title_case($value);
     }
+
+    public function getYearList()
+    {
+        return $this->selectRaw('DATE_FORMAT(fecha, "%Y") as year')
+            ->groupBy('year')
+            ->orderBy('year', 'desc')
+            ->pluck('year')
+            ->toArray();
+    }
 }

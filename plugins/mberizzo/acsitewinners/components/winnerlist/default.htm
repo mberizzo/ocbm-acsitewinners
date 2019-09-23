@@ -1,0 +1,20 @@
+{% set winnerList = __SELF__.winners %}
+
+<table class="table">
+    <thead>
+        <th>Cuota Nro.</th>
+        <th>Producto</th>
+        <th>Nombre y Apellido</th>
+        <th>Localidad</th>
+    </thead>
+    <tbody>
+        {% for person in winnerList %}
+            <tr>
+                <td>{{ person.cuota }}</td>
+                <td>{{ person.producto }}</td>
+                <td>{{ person.nombre }}</td>
+                <td>{{ person.provincia }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
