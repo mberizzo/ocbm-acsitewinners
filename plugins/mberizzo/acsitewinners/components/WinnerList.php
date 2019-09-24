@@ -7,6 +7,8 @@ class WinnerList extends ComponentBase
 {
 
     public $winners;
+    public $activeYear;
+    public $activeMonth;
 
     public function componentDetails()
     {
@@ -32,11 +34,29 @@ class WinnerList extends ComponentBase
 
     public function onRun()
     {
-        $year = $this->property('year') ?? date('Y');
-        $month = $this->property('month') ?? '01';
+        $year = $this->page['activeYear'] = $this->getYear();
+        $month = $this->page['activeMonth'] = $this->getMonth();
 
         $this->winners = Winner::whereYear('fecha', $year)
             ->whereMonth('fecha', $month)
             ->get();
+    }
+
+    private function getYear()
+    {
+        if (! empty($this->property('year'))) {
+            return $this->property('year');
+        }
+
+        return date('Y');
+    }
+
+    private function getMonth()
+    {
+        if (! empty($this->property('month'))) {
+            return $this->property('month');
+        }
+
+        return '01';
     }
 }

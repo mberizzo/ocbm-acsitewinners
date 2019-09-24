@@ -3,7 +3,7 @@
 
 <ul>
     {% for year in yearList %}
-        <li>
+        <li {% if (activeYear == year) %} class="active" {% endif %}>
             <a href="{{ listPage|page({year: year, month: '01'}) }}">
                 {{ year }}
             </a>

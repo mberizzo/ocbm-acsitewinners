@@ -1,12 +1,11 @@
 {% set monthList = __SELF__.months %}
 {% set listPage = __SELF__.property('page') %}
-{% set year = __SELF__.property('year') %}
 
 <ul>
-    {% for key,month in monthList %}
-        <li>
-            <a href="{{ listPage|page({year: year, month: key}) }}">
-                {{ month }}
+    {% for monthNum, monthText in monthList %}
+        <li {% if (activeMonth == monthNum) %} class="active" {% endif %}>
+            <a href="{{ listPage|page({year: activeYear, month: monthNum}) }}">
+                {{ monthText }}
             </a>
         </li>
     {% endfor %}

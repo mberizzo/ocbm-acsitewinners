@@ -22,10 +22,6 @@ class MonthList extends ComponentBase
                 'title' => 'Page',
                 'type'  => 'dropdown'
             ],
-            'year' => [
-                'title' => 'Year',
-                'default' => '{{ :year }}',
-            ],
         ];
     }
 
