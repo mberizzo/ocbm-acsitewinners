@@ -10,6 +10,7 @@ class Plugin extends PluginBase
             'Mberizzo\Acsitewinners\Components\WinnerList' => 'winnerList',
             'Mberizzo\Acsitewinners\Components\YearList' => 'yearList',
             'Mberizzo\Acsitewinners\Components\MonthList' => 'monthList',
+            'Mberizzo\Acsitewinners\Components\ExtraData' => 'extraData',
         ];
     }
 }

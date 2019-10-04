@@ -1,6 +1,6 @@
 <?php return [
     'plugin' => [
-        'name' => 'Ganadores',
+        'name' => 'Adjudicados',
         'description' => '',
     ],
     'labels' => [
