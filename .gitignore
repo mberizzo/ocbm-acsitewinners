@@ -5,4 +5,6 @@
 !/plugins
 /plugins/*
 !/plugins/mberizzo
+/plugins/mberizzo
+!/plugins/mberizzo/acsitewinners
 
