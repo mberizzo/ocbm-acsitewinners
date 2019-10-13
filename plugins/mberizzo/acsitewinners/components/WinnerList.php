@@ -42,6 +42,11 @@ class WinnerList extends ComponentBase
             ->get();
     }
 
+    public function getLastWinner()
+    {
+        return Winner::orderBy('id', 'desc')->first();
+    }
+
     private function getYear()
     {
         if (! empty($this->property('year'))) {
