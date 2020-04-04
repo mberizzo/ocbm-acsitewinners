@@ -1,6 +1,7 @@
 <?php namespace Mberizzo\Acsitewinners\Components;
 
 use Cms\Classes\ComponentBase;
+use Illuminate\Support\Facades\DB;
 use Mberizzo\Acsitewinners\Models\Winner;
 use October\Rain\Support\Facades\Config;
 
@@ -34,14 +35,16 @@ class ExtraData extends ComponentBase
 
     public function onRun()
     {
-        $query = Winner::whereYear('fecha', $this->getYear())
-            ->whereMonth('fecha', $this->getMonth());
+        $dataMoney = $this->getQueryBase()
+            ->select(DB::raw("SUM(replace(valor, ',', '')) as total"))
+            ->first()
+            ->total;
 
-        $dataMoney = $query->sum('valor');
+        $nDraw = $this->getQueryBase()->select('nrosorteo')->first();
 
         $this->dataMoney = number_format($dataMoney, 2, ',', '.');
         $this->monthText = $this->getMonthText();
-        $this->nDraw = optional($query->first())->nrosorteo ?? 0;
+        $this->nDraw = optional($nDraw)->nrosorteo ?? 0;
     }
 
     private function getYear()
@@ -67,6 +70,12 @@ class ExtraData extends ComponentBase
         $month = $this->getMonth();
         $months = Config::get('mberizzo.acsitewinners::months');
         return $months[$month];
+    }
+
+    private function getQueryBase()
+    {
+        return Winner::whereYear('fecha', $this->getYear())
+            ->whereMonth('fecha', $this->getMonth());
     }
 
 }
