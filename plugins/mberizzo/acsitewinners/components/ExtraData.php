@@ -44,8 +44,6 @@ class ExtraData extends ComponentBase
         $this->dataProximoSorteo = $this->getProximoSorteo();
         $this->monthText = $this->getMonthText();
         $this->nDraw = optional($nDraw)->nrosorteo ?? 0;
-
-        dd($this->dataMontoEntregado, $this->dataProximoSorteo);
     }
 
     private function getProximoSorteo()
