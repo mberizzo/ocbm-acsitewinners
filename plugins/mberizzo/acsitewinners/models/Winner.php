@@ -21,7 +21,17 @@ class Winner extends Model
      *
      * @var array
      */
-    protected $fillable = ['fecha', 'cuota', 'producto', 'nombre', 'provincia', 'valor', 'nrosorteo'];
+    protected $fillable = [
+        'fecha',
+        'cuota',
+        'producto',
+        'nombre',
+        'provincia',
+        'valor',
+        'nrosorteo',
+        'monto_entregado',
+        'proximo_sorteo',
+    ];
 
     /**
      * @var array Validation rules

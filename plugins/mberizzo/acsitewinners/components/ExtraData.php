@@ -9,6 +9,8 @@ class ExtraData extends ComponentBase
 {
 
     public $dataMoney;
+    public $dataMontoEntregado;
+    public $dataProximoSorteo;
     public $nDraw;
     public $monthText;
 
@@ -35,16 +37,48 @@ class ExtraData extends ComponentBase
 
     public function onRun()
     {
+        $nDraw = $this->getQueryBase()->select('nrosorteo')->first();
+
+        // $this->dataMoney = $this->sumTotal(); // this is the old way
+        $this->dataMontoEntregado = $this->getMontoEntregado();
+        $this->dataProximoSorteo = $this->getProximoSorteo();
+        $this->monthText = $this->getMonthText();
+        $this->nDraw = optional($nDraw)->nrosorteo ?? 0;
+
+        dd($this->dataMontoEntregado, $this->dataProximoSorteo);
+    }
+
+    private function getProximoSorteo()
+    {
+        return $this->getQueryBase()
+            ->select('proximo_sorteo')
+            ->whereNotNull('proximo_sorteo')
+            ->first()
+            ->proximo_sorteo;
+    }
+
+    private function getMontoEntregado()
+    {
+        return $this->getQueryBase()
+            ->select('monto_entregado')
+            ->whereNotNull('monto_entregado')
+            ->first()
+            ->monto_entregado ?? null;
+    }
+
+    /**
+     * Deprecated function
+     *
+     * @return [type] [description]
+     */
+    private function sumTotal()
+    {
         $dataMoney = $this->getQueryBase()
             ->select(DB::raw("SUM(replace(valor, ',', '')) as total"))
             ->first()
             ->total;
 
-        $nDraw = $this->getQueryBase()->select('nrosorteo')->first();
-
-        $this->dataMoney = number_format($dataMoney, 2, ',', '.');
-        $this->monthText = $this->getMonthText();
-        $this->nDraw = optional($nDraw)->nrosorteo ?? 0;
+        return number_format($dataMoney, 2, ',', '.');
     }
 
     private function getYear()

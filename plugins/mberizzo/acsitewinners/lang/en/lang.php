@@ -11,5 +11,7 @@
         'location' => 'Localidad',
         'value' => 'Value',
         'draw_number' => 'Draw Number',
+        'value_custom' => 'Custom Value',
+        'next_draw' => 'Next Draw',
     ],
 ];

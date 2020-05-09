@@ -3,3 +3,6 @@
 1.0.2:
     - 'Created table mberizzo_acsitewinners_winners'
     - builder_table_create_mberizzo_acsitewinners_winners.php
+1.0.3:
+    - 'Updated table mberizzo_acsitewinners_winners'
+    - builder_table_update_mberizzo_acsitewinners_winners.php

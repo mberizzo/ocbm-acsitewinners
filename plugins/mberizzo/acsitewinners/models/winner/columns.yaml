@@ -34,3 +34,13 @@ columns:
         type: text
         searchable: true
         sortable: true
+    monto_entregado:
+        label: 'mberizzo.acsitewinners::lang.labels.value_custom'
+        type: text
+        searchable: true
+        sortable: true
+    proximo_sorteo:
+        label: 'mberizzo.acsitewinners::lang.labels.next_draw'
+        type: text
+        searchable: true
+        sortable: true
