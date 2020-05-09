@@ -52,7 +52,7 @@ class ExtraData extends ComponentBase
             ->select('proximo_sorteo')
             ->whereNotNull('proximo_sorteo')
             ->first()
-            ->proximo_sorteo;
+            ->proximo_sorteo ?? null;
     }
 
     private function getMontoEntregado()
