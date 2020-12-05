@@ -44,3 +44,8 @@ columns:
         type: text
         searchable: true
         sortable: true
+    categoria:
+        label: 'mberizzo.acsitewinners::lang.labels.category'
+        type: text
+        searchable: true
+        sortable: true

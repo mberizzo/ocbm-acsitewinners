@@ -31,6 +31,7 @@ class Winner extends Model
         'nrosorteo',
         'monto_entregado',
         'proximo_sorteo',
+        'categoria',
     ];
 
     /**

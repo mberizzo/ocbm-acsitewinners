@@ -13,5 +13,6 @@
         'draw_number' => 'NROSORTEO',
         'value_custom' => 'MONTO ENTREGADO',
         'next_draw' => 'PROXIMO SORTEO',
+        'category' => 'CATEGORIA',
     ],
 ];
