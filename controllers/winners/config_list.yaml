@@ -1,0 +1,11 @@
+list: $/mberizzo/acsitewinners/models/winner/columns.yaml
+modelClass: Mberizzo\Acsitewinners\Models\Winner
+title: Winners
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,12 @@
+{% set yearList = __SELF__.years %}
+{% set listPage = __SELF__.property('page') %}
+
+<ul>
+    {% for year in yearList %}
+        <li {% if (activeYear == year) %} class="active" {% endif %}>
+            <a href="{{ listPage|page({year: year, month: '01'}) }}">
+                {{ year }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

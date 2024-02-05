@@ -1,0 +1,12 @@
+{% set monthList = __SELF__.months %}
+{% set listPage = __SELF__.property('page') %}
+
+<ul>
+    {% for monthNum, monthText in monthList %}
+        <li class="{% if (activeMonth == monthNum) %} active {% endif %} {% if not (__SELF__.hasResult(activeYear, monthNum)) %} disabled {% endif %}">
+            <a href="{{ listPage|page({year: activeYear, month: monthNum}) }}">
+                {{ monthText }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

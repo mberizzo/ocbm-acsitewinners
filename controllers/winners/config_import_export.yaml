@@ -1,0 +1,10 @@
+import:
+    title: Import
+    modelClass: Mberizzo\Acsitewinners\Models\WinnerImport
+    list: $/mberizzo/acsitewinners/models/winner/columns.yaml
+
+defaultFormatOptions:
+    delimiter: ';'
+    enclosure: '"'
+    escape: '\'
+    encoding: 'ISO-8859-9'

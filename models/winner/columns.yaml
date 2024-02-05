@@ -1,0 +1,51 @@
+columns:
+    fecha:
+        label: 'mberizzo.acsitewinners::lang.labels.date'
+        type: text
+        searchable: true
+        sortable: true
+    cuota:
+        label: 'mberizzo.acsitewinners::lang.labels.num_installments'
+        type: number
+        searchable: true
+        sortable: true
+    producto:
+        label: 'mberizzo.acsitewinners::lang.labels.product_name'
+        type: text
+        searchable: true
+        sortable: true
+    nombre:
+        label: 'mberizzo.acsitewinners::lang.labels.name'
+        type: text
+        searchable: true
+        sortable: true
+    provincia:
+        label: 'mberizzo.acsitewinners::lang.labels.location'
+        type: text
+        searchable: true
+        sortable: true
+    valor:
+        label: 'mberizzo.acsitewinners::lang.labels.value'
+        type: text
+        searchable: true
+        sortable: true
+    nrosorteo:
+        label: 'mberizzo.acsitewinners::lang.labels.draw_number'
+        type: text
+        searchable: true
+        sortable: true
+    monto_entregado:
+        label: 'mberizzo.acsitewinners::lang.labels.value_custom'
+        type: text
+        searchable: true
+        sortable: true
+    proximo_sorteo:
+        label: 'mberizzo.acsitewinners::lang.labels.next_draw'
+        type: text
+        searchable: true
+        sortable: true
+    categoria:
+        label: 'mberizzo.acsitewinners::lang.labels.category'
+        type: text
+        searchable: true
+        sortable: true
