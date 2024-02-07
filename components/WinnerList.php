@@ -41,8 +41,6 @@ class WinnerList extends ComponentBase
             ->whereMonth('fecha', $month)
             ->get()
             ->groupBy('categoria');
-
-        // dd($this->winners);
     }
 
     public function getLastWinner()

@@ -1,0 +1,37 @@
+{% set monthList = __SELF__.months %}
+{% set yearList = __SELF__.years %}
+{% set listPage = __SELF__.property('page') %}
+
+<div class="container">
+    <label>Mes</label>
+    <select class="form-select" id="MonthYearDropdown__month">
+        {% for monthNum, monthText in monthList %}
+            <option value="{{ monthNum }}" {% if monthNum == activeMonth %} selected {% endif %}>
+                {{ monthText }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <label>Año</label>
+    <select class="form-select" id="MonthYearDropdown__year">
+        {% for year in yearList %}
+            <option value="{{ year }}" {% if year == activeYear %} selected {% endif %}>
+                {{ year }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <button id="MonthYearDropdown__search">Buscar</button>
+</div>
+
+{% put scripts %}
+<script>
+  let search = document.getElementById('MonthYearDropdown__search');
+
+  search.onclick = function (event) {
+    let month = document.getElementById('MonthYearDropdown__month');
+    let year = document.getElementById('MonthYearDropdown__year');
+    window.location.href = `/{{ listPage }}/${year.value}/${month.value}`;
+  }
+</script>
+{% endput %}

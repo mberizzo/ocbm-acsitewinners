@@ -11,6 +11,7 @@ class Plugin extends PluginBase
             'Mberizzo\Acsitewinners\Components\YearList' => 'yearList',
             'Mberizzo\Acsitewinners\Components\MonthList' => 'monthList',
             'Mberizzo\Acsitewinners\Components\ExtraData' => 'extraData',
+            'Mberizzo\Acsitewinners\Components\MonthYearDropdown' => 'monthYearDropdown',
         ];
     }
 }
